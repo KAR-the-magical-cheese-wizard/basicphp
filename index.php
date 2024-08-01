@@ -42,13 +42,12 @@ li a:hover:not(.active) {
 
 <ul>
   <li><a class="active" href="index.php">Home</a></li>
-  <li><a href="register.php">All user</a></li>
+  <li><a href="show_user.php">All user</a></li>
   <li><a href="#contact">Contact</a></li>
   <li><a href="#about">About</a></li>
   <li style="float:right">
     <a class="active" href="logout.php">Logout</a>
-
-</li>
+  </li>
 </ul>
 </ul>
 
