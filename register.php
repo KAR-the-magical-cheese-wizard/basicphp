@@ -80,9 +80,9 @@ ul {
 ?>    
 <h3>แก้ไขข้อมูลผู้ใช้</h3>
 <div>
-  <form action="api/api_edituser.php?user_id=<?php echo $fet->user_ID; ?>" method="post">
-    <label for="username">Username</label>
-    <input type="text" id="fname" value="<?php echo $fet->Username; ?>" name="username" placeholder="Your username..">
+  <form action="api/api_edituser.php?user_id=<?php echo $fet->user_id; ?>" method="post" enctype="multipart/from-data">
+    <label for="username">username</label>
+    <input type="text" id="fname" value="<?php echo $fet->username; ?>" name="username" placeholder="Your username..">
 
     <label for="password">Password</label>
     <input type="password" id="lname" value="<?php echo $fet->password; ?>" name="password" placeholder="Your password..">
@@ -99,15 +99,16 @@ ul {
     <label for="lname">Line token</label>
     <input type="text" id="lname" value="<?php echo $fet->linetoken; ?>" name="linetoken" placeholder="Your linetoken..">
 
-   
-  
+    <label for="img">รูปภาพ</label>
+    <input type="file" name="img" id="img">
+    
     <input type="submit" value="Submit">
   </form>
 </div>
 <?php }else{ ?>
   <h3>เพิ่มผู้ใช้งาน</h3>
   <div>
-  <form action="api/api_register.php" method="post">
+  <form action="api/api_register.php" method="post" enctype="multipart/form-data">
     <label for="username">username</label>
     <input type="text" id="fname" name="username" placeholder="Your username..">
 
@@ -125,9 +126,10 @@ ul {
 
     <label for="lname">Line token</label>
     <input type="text" id="lname" name="linetoken" placeholder="Your linetoken..">
+    
+    <label for="img">รูปภาพ</label>
+    <input type="file" name="img" id="img">
 
-   
-  
     <input type="submit" value="Submit">
   </form>
 </div>

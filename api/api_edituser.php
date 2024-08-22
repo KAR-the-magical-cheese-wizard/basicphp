@@ -1,6 +1,6 @@
 <?php
     include '../connect.php';
-    $sql = "UPDATE tb_user SET username='".$_REQUEST['usernsme']."',password='".$_REQUEST['password']."',fullname='".$_REQUEST['fullname']."',phone='".$_REQUEST['phone']."',email='".$_REQUEST['email']."',linetoken='".$_REQUEST['linetoken']."' WHERE user_id='".$_REQUEST['user_id']."' ";
+    $sql = "UPDATE tb_user SET username='".$_REQUEST['username']."',password='".$_REQUEST['password']."',fullname='".$_REQUEST['fullname']."',phone='".$_REQUEST['phone']."',email='".$_REQUEST['email']."',linetoken='".$_REQUEST['linetoken']."' WHERE user_id='".$_REQUEST['user_id']."' ";
     $query = $conn->query($sql);
     if($query){
         echo "<script>

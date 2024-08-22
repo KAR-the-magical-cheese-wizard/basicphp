@@ -90,6 +90,7 @@ ul {
     <th>E-mail</th>
     <th>เบอร์โทรศัพท์</th>
     <th>Action</th>
+    <th>file</th>
   </tr>
   <?php
     $sql = "SELECT * FROM tb_user";
@@ -106,8 +107,10 @@ ul {
     <td><?php echo $fet_user->email; ?></td>
     <td><?php echo $fet_user->phone; ?></td>
     <td>
-      <a href="register.php?user_id=<?php echo $fet_user->user_ID;?>" class="button">Edit</a>
-      <a href="api/api_deluser.php?user_id=<?php echo $fet_user->user_ID;?>" class="button" style="background-color: red;" onclick="return confirm('คุณต้องการลบรายการนี้ใช่ไหม?')">Del</a>
+      <a href="register.php?user_id=<?php echo $fet_user->user_id;?>" class="button">Edit</a>
+      <a href="api/api_deluser.php?user_id=<?php echo $fet_user->user_id;?>" class="button" style="background-color: red;" onclick="return confirm('คุณต้องการลบรายการนี้ใช่ไหม?')">Del</a>
+      <a href="fpdf/export_user.php?user_id=<?php echo $fet_user->user_id; ?>" class="button"
+      style="background-color: blue;">PDF</a>
 
     
     </td>
